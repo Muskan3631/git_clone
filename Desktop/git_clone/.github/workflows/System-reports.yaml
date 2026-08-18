@@ -8,6 +8,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
       - name: Print OS and Kernel
         run: |
           echo "OS:"
@@ -37,6 +40,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
       - name: Install jq
         run: |
           sudo apt-get update
@@ -58,5 +64,3 @@ jobs:
 
       - name: Complete
         run: echo "Report complete"
-        # System Report workflow
-        
